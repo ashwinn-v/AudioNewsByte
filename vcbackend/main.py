@@ -7,7 +7,7 @@ import os
 from typing import Dict, Union
 from pydub import AudioSegment
 
-client = OpenAI(api_key="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")
+client = OpenAI(api_key="A")
 news_audio_path = "/Users/ashwinv/Downloads/AudioNewsByte/vcbackend/Spain floods death toll rises as rescuers continue search for survivors  BBC News.mp3"
 summary_model = "gpt-4o-mini"
 qa_model = "gpt-4o-mini"
