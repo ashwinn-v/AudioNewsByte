@@ -1,0 +1,75 @@
+/* src/App.css */
+
+@font-face {
+  font-family: 'Pixelated';
+  src: url('data:font/woff2;charset=utf-8;base64,...') format('woff2');
+}
+
+.pixelated {
+  font-family: 'Press Start 2P', monospace;
+  letter-spacing: 0.2em;
+}
+
+@keyframes particle {
+  0% {
+    transform: translateY(0) translateX(0);
+  }
+  100% {
+    transform: translateY(-100vh) translateX(100vw);
+  }
+}
+
+.particle {
+  pointer-events: none;
+}
+
+.pacman-logo {
+  width: 32px;
+  height: 32px;
+  position: relative;
+  display: inline-block;
+}
+
+.pacman {
+  width: 0px;
+  height: 0px;
+  border-right: 16px solid transparent;
+  border-top: 16px solid #F8F7FF;
+  border-left: 16px solid #F8F7FF;
+  border-bottom: 16px solid #F8F7FF;
+  border-radius: 50%;
+  animation: eat 0.5s linear infinite;
+}
+
+.food {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  width: 6px;
+  height: 6px;
+  background: #F8F7FF;
+  border-radius: 50%;
+  animation: move 0.5s linear infinite;
+}
+
+@keyframes eat {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(45deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes move {
+  0% {
+    right: 0;
+  }
+  100% {
+    right: 100%;
+  }
+}
